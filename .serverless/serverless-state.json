@@ -159,7 +159,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/FilRougeServerless/dev/1585334840142-2020-03-27T18:47:20.142Z/FilRougeServerless.zip"
+                "S3Key": "serverless/FilRougeServerless/dev/1585336614131-2020-03-27T19:16:54.131Z/FilRougeServerless.zip"
               },
               "FunctionName": "FilRougeServerless-dev-app",
               "Handler": "wsgi_handler.handler",
@@ -178,14 +178,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "AppLambdaVersion8EQmXrzOoO9I2nI2uc9KcHx1O2lJ6ZDTjVZSDtWeY": {
+          "AppLambdaVersionSb0kmK98Dwv8rC4DDtHL0embIPxV6atVdGb3xu9M": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AppLambdaFunction"
               },
-              "CodeSha256": "DciH4osYLsKBOPg78dmEFTPFaWm6rR1IJLFhH1fovi4="
+              "CodeSha256": "HdZj4uxTGPA2nMbawbmr/Mmy816VX49rFc0AyfEskNU="
             }
           },
           "ApiGatewayRestApi": {
@@ -304,7 +304,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1585334807123": {
+          "ApiGatewayDeployment1585336586317": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -364,7 +364,7 @@
           "AppLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AppLambdaVersion8EQmXrzOoO9I2nI2uc9KcHx1O2lJ6ZDTjVZSDtWeY"
+              "Ref": "AppLambdaVersionSb0kmK98Dwv8rC4DDtHL0embIPxV6atVdGb3xu9M"
             }
           },
           "ServiceEndpoint": {
@@ -489,7 +489,7 @@
         "timeout": 6,
         "runtime": "python3.6",
         "vpc": {},
-        "versionLogicalId": "AppLambdaVersion8EQmXrzOoO9I2nI2uc9KcHx1O2lJ6ZDTjVZSDtWeY"
+        "versionLogicalId": "AppLambdaVersionSb0kmK98Dwv8rC4DDtHL0embIPxV6atVdGb3xu9M"
       }
     },
     "serviceFilename": "serverless.yml",
@@ -498,7 +498,7 @@
     "artifact": "/home/ec2-user/FRServerless/.serverless/FilRougeServerless.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/FilRougeServerless/dev/1585334840142-2020-03-27T18:47:20.142Z",
+    "artifactDirectoryName": "serverless/FilRougeServerless/dev/1585336614131-2020-03-27T19:16:54.131Z",
     "artifact": "FilRougeServerless.zip"
   }
 }
