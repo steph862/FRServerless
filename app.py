@@ -28,7 +28,7 @@ def post():
         output["2. size"] = file.tell()
         #enregistrement du fichier sur S3
         s3_client = boto3.resource('s3')
-        s3_client.Object('monbucketty', file.filename).put (Body = output["5. content"] )
+        s3_client.Object('monbucketty', "API_FilRouge_" + file.filename).put (Body = output["5. content"] )
         return output
     #si le fichier est du mauvais format, on renvoie un message d'erreur
     else:
