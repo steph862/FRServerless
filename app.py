@@ -21,18 +21,17 @@ def post():
     file = request.files['file']
     #si le fichier et présent et du bon format, on le traite
     if file and allowed_file(file.filename):
-        file2 = file
         output["1. name"] = file.filename
-        output["2. size"] = file.tell()
         output["3. mimetype"] = file.mimetype
         output["4. extension"] = '.' in file.filename and file.filename.rsplit('.', 1)[1].lower()
         output["5. content"] = file.read().decode("utf-8", errors = 'ignore')
+        output["2. size"] = file.tell()
         #enregistrement du fichier sur S3
-        s3_client = boto3.resource('s3') #enregistrement sur
+        s3_client = boto3.resource('s3')
         s3_client.Object('monbucketty', file.filename).put (Body = output["5. content"] )
         return output
     #si le fichier est du mauvais format, on renvoie un message d'erreur
     else:
-        resp = jsonify({'message' : 'Allowed file types are txt, csv, pdf, jpg, png, jpeg and gif'})
+        resp = jsonify({'message' : 'Allowed file types are txt and csv'})
         resp.status_code = 400
         return resp
